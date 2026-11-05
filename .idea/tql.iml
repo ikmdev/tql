@@ -1,9 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <output url="file://$MODULE_DIR$/api/build/main" />
+    <output-test url="file://$MODULE_DIR$/api/build/test" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <!-- Main Sources & Resources -->
+      <sourceFolder url="file://$MODULE_DIR$/api/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/api/src/main/resources" type="java-resource" />
+
+      <!-- Test Sources & Resources -->
+      <sourceFolder url="file://$MODULE_DIR$/api/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/api/src/test/resources" type="java-test-resource" />
+
+      <!-- bld Build Scripts -->
+      <sourceFolder url="file://$MODULE_DIR$/api/src/bld/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/api/src/bld/resources" type="java-resource" />
+
+      <!-- Exclude bld build output to prevent indexing duplicate classes -->
+      <excludeFolder url="file://$MODULE_DIR$/api/build" />
+    </content>
+
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+
+    <!-- bld Core Framework (Global Cache) -->
+    <orderEntry type="module-library">
+      <library name="bld-core">
+        <CLASSES>
+          <root url="file://$USER_HOME$/.bld" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/.bld" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/.bld" recursive="true" />
+        <jarDirectory url="file://$USER_HOME$/.bld" recursive="true" type="SOURCES" />
+      </library>
+    </orderEntry>
+
+    <!-- Compile Dependencies -->
+    <orderEntry type="module-library">
+      <library name="compile">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/api/lib/compile" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/api/lib/compile" recursive="true" />
+      </library>
+    </orderEntry>
+
+    <!-- Provided Dependencies -->
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library name="provided">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/api/lib/provided" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/api/lib/provided" recursive="true" />
+      </library>
+    </orderEntry>
+
+    <!-- Runtime Dependencies -->
+    <orderEntry type="module-library" scope="RUNTIME">
+      <library name="runtime">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/api/lib/runtime" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/api/lib/runtime" recursive="true" />
+      </library>
+    </orderEntry>
+
+    <!-- Test Dependencies -->
+    <orderEntry type="module-library" scope="TEST">
+      <library name="test">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/api/lib/test" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/api/lib/test" recursive="true" />
+      </library>
+    </orderEntry>
+
+    <!-- bld Framework Dependencies -->
+    <orderEntry type="module-library">
+      <library name="bld">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/api/lib/bld" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/api/lib/bld" recursive="true" />
+      </library>
+    </orderEntry>
   </component>
 </module>

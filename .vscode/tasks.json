@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "bld compile",
+            "type": "shell",
+            "command": "./bld compile",
+            "options": {
+                "cwd": "${workspaceFolder}/api"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Start API (Debug Mode)",
+            "type": "shell",
+            "command": "java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -cp 'build/main:lib/compile/*:lib/provided/*:lib/runtime/*' dev.ikm.tql.Api",
+            "options": {
+                "cwd": "${workspaceFolder}/api"
+            },
+            "dependsOn": "bld compile",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

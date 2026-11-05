@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "intellij_jvm",
+            "request": "attach",
+            "name": "Attach to API (Port 5005)",
+            "port": 5005
+        }
+    ]
+}
