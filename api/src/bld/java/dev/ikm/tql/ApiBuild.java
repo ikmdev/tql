@@ -24,8 +24,8 @@ public class ApiBuild extends Project {
                 RIFE2_RELEASES,
                 new Repository(
                         "https://nexus.yourcompany.com/repository/maven-releases/",
-                        System.getProperty("nexus.user"),
-                        System.getProperty("nexus.password")
+                        property("nexus.user"),
+                        property("nexus.password")
                 ));
 
         var helidonVersion = version(27, 0, 1); // check latest release
